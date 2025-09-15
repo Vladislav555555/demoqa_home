@@ -9,7 +9,6 @@ class SwagLabs(BasePage):
             return False
         return True
 
-
     def exist_username_field(self):
         try:
             self.find_element(locator='input#user-name')
@@ -23,5 +22,3 @@ class SwagLabs(BasePage):
         except NoSuchElementException:
             return False
         return True
-
-

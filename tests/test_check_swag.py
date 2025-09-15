@@ -5,10 +5,12 @@ def test_icon_exists(browser):
     page.visit()
     assert page.exist_icon() is True
 
+
 def test_username_field_exists(browser):
-        page = SwagLabs(browser)
-        page.visit()
-        assert page.exist_username_field() is True
+    page = SwagLabs(browser)
+    page.visit()
+    assert page.exist_username_field() is True
+
 
 def test_password_field_exists(browser):
     page = SwagLabs(browser)
