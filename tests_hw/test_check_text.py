@@ -1,5 +1,5 @@
-'''from test_homework_7.demoqa_hw import DemoQa
-from test_homework_7.elements_page_hw import ElementsPage
+from pages.demoqa import DemoQa
+from pages.elements_page import ElementsPage
 
 class TestDemoQa:
 
@@ -18,4 +18,4 @@ class TestDemoQa:
         elements_page = ElementsPage(browser)
         center_text = elements_page.central_text.get_text()
         assert center_text == 'Please select an item from left to start practice.', \
-               f"Результат: '{center_text}'"'''
+               f"Результат: '{center_text}'"

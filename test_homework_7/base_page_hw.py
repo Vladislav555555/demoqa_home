@@ -1,4 +1,4 @@
-class BasePage:
+'''class BasePage:
 
     def __init__(self, driver, base_url):
         self.driver = driver
@@ -17,4 +17,4 @@ class BasePage:
         if self.get_url() == self.base_url:
             return True
         else:
-            return False
+            return False'''

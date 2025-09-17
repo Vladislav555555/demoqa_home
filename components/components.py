@@ -1,4 +1,4 @@
-'''from selenium.webdriver.common.by import By
+from selenium.webdriver.common.by import By
 
 class WebElement:
 
@@ -13,4 +13,4 @@ class WebElement:
         return self.driver.find_element(By.CSS_SELECTOR, self.locator)
 
     def get_text(self):
-        return str(self.find_element().text)'''
+        return str(self.find_element().text)
