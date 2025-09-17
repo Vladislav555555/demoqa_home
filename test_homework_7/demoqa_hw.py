@@ -6,5 +6,6 @@ class DemoQa(BasePage):
         base_url = 'https://demoqa.com/'
         super().__init__(driver, base_url)
         self.footer = WebElement(driver, 'footer')
-        self.btn_elements = WebElement(driver, "#app > div > div > div > div.col-12.mt-4.col-md-6")
+        self.btn_elements = WebElement(driver, 'div.top-card:nth-child(1)')
+
 
