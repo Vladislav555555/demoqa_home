@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-
+from selenium.common.exceptions import NoSuchElementException
 class WebElement:
 
     def __init__(self, driver, locator=''):
@@ -14,3 +14,19 @@ class WebElement:
 
     def get_text(self):
         return str(self.find_element().text)
+
+    def exist(self):
+        try:
+            self.find_element()
+        except NoSuchElementException:
+            return False
+        return True
+
+    def visible(self):
+        try:
+            return self.find_element().is_displayed()
+        except NoSuchElementException:
+            return False
+
+    def is_displayed(self):
+        return self.find_element().is_displayed()
