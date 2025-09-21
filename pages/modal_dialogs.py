@@ -30,3 +30,4 @@ class ModalDialogs:
 
     def get_title(self):
         self.driver.get_title()
+
