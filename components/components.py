@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 
 class WebElement:
 
-    def __init__(self, driver, locator='', locator_type ='css'):
+    def __init__(self, driver, locator='', locator_type='css'):
         self.driver = driver
         self.locator = locator
         self.locator_type = locator_type
@@ -40,7 +40,7 @@ class WebElement:
     def is_displayed(self):
         return self.find_element().is_displayed()
 
-    def check_count_elements(self, count: int)-> bool:
+    def check_count_elements(self, count: int) -> bool:
         if len(self.find_elements()) == count:
             return True
         return False
@@ -52,8 +52,8 @@ class WebElement:
         self.send_keys(Keys.CONTROL + 'a')
         self.send_keys(Keys.DELETE)
 
-    def get_don_attribute(self, name: str):
-        value = self.find_element().get_don_attribute(name)
+    def get_dom_attribute(self, name: str):
+        value = self.find_element().get_dom_attribute(name)
         if value is None:
             return False
         if len(value) > 0:
@@ -65,7 +65,6 @@ class WebElement:
             'window.scrollTo(0,document.body.scrollHeight);',
             self.find_element()
         )
-
 
     def get_by_type(self):
         if self.locator_type == 'id':
@@ -81,7 +80,6 @@ class WebElement:
         elif self.locator_type == 'link':
             return By.LINK_TEXT
         else:
-            print('locator_type' + self.locator_type + 'not correct')
-        return False
-
+            print('locator_type ' + self.locator_type + ' not correct')
+            return False
 
