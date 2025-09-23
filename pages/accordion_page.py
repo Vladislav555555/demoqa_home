@@ -1,6 +1,7 @@
 from pages.accordion import Accordion
 from components.components import WebElement
 
+
 class AccordionPage(Accordion):
     def __init__(self, driver):
         self.base_url = 'https://demoqa.com/accordian'
