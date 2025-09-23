@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 
+
 class WebElement:
 
     def __init__(self, driver, locator='', locator_type='css'):
