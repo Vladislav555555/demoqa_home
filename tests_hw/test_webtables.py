@@ -13,9 +13,9 @@ def test_web_tables(browser):
     web_tables.rows_btn.send_keys(Keys.ENTER)
     assert web_tables.rows_count.check_count_elements(count=5 )
     time.sleep(2)
-    assert not web_tables.next_btn.get_dom_attribute('disabled') == 'disabled'
+    assert web_tables.next_btn.get_dom_attribute('disabled') is not None
     time.sleep(2)
-    assert not web_tables.previous_btn.get_dom_attribute('disabled') == 'disabled'
+    assert web_tables.previous_btn.get_dom_attribute('disabled') is not None
     time.sleep(2)
 
     for i in range(3):
