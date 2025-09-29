@@ -16,6 +16,6 @@ def test_login_form_validate(browser):
     assert '@' in pattern and '^' in pattern and '$' in pattern
     login_form_validate.submit_btn.scroll_to_element()
     time.sleep(2)
-    login_form_validate.first_name.click()
+    login_form_validate.submit_btn.click()
     time.sleep(2)
     assert 'was-validated' in login_form_validate.user_form.get_dom_attribute('class')
