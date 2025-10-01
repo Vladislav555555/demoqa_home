@@ -6,7 +6,7 @@ def test_alert(browser):
     alert_page = Alerts(browser)
     alert_page.visit()
     alert_page.alert_btn.click()
-    assert alert_page.alert().text() == 'You clicked a button'
+    assert alert_page.alert().text == 'You clicked a button'
     alert_page.alert().accept()
     assert not alert_page.alert()
 
