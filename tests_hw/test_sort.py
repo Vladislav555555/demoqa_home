@@ -5,23 +5,22 @@ import time
 def test_sort(browser):
     sort_page = WebTables(browser)
     sort_page.visit()
-    sort_page.first_name_column.click()
-    time.sleep(2)
 
-    sort_page.first_name_column.click()
-    time.sleep(2)
+    def check_sort(column):
+        assert column.get_dom_attribute('class') == 'rt-resizable-header-content'
+        column.click()
+        time.sleep(2)
+        assert column.get_dom_attribute('class') == 'rt-th rt-th--sorted-asc'
 
-    sort_page.age_column.click()
-    time.sleep(2)
+    check_sort(sort_page.first_name_column)
+    check_sort(sort_page.last_name_column)
+    check_sort(sort_page.age_column)
+    check_sort(sort_page.email_column)
+    check_sort(sort_page.salary_column)
+    check_sort(sort_page.department_column)
+    check_sort(sort_page.action_column)
 
-    sort_page.email_column.click()
-    time.sleep(2)
 
-    sort_page.salary_column.click()
-    time.sleep(2)
 
-    sort_page.department_column.click()
-    time.sleep(2)
 
-    sort_page.action_column.click()
-    time.sleep(2)
+
